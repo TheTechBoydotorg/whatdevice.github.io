@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Find information about your computer, phone, tablet, or other device without downloading any software.">
+	<meta name="keywords" content="stats,specs,whatdevice,device,device info,user agent,browser, user agent string">
+	<meta name="author" content="Corbin Davenport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="https://whatdevice.app/index.html" />
+	<title>WhatDevice</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-slider.min.css" rel="stylesheet">
+	<link href="css/whatdevice.css" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<meta name="msapplication-TileColor" content="#e7e7e7">
+	<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+	<meta name="theme-color" content="#18bc9c">
+	<script defer data-domain="whatdevice.app" src="https://plausible.io/js/plausible.js"></script>
+</head>
+<body>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<span class="navbar-brand">WhatDevice</span>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse" role="navigation">
+				<ul class="nav navbar-nav navbar-right" role="menubar">
+					<li class="share-button share-button-nav"><a href="#">Share results</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container main-container">
+		<div class="row">
+
+			<div class="col-md-6">
+
+				<div class="panel panel-default panel-device">
+					<div class="panel-heading" role="heading">Your device</div>
+					<div class="panel-body">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							</div>
+						</div>
+						<table>
+							<tr>
+								<td class="device-icon"></td>
+								<td class="device-info"></td> 
+							</tr>
+						</table>
+						<div class="device-warning"></div>
+						<div class="device-screen-info"></div>
+					</div>
+				</div>
+			
+			</div>
+
+			<div class="col-md-6">
+
+				<div class="panel panel-default panel-graphics">
+					<div class="panel-heading" role="heading">Graphics</div>
+					<div class="panel-body">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-6">
+
+				<div class="panel panel-default panel-browser">
+					<div class="panel-heading" role="heading">Web browser</div>
+					<div class="panel-body">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+
+				<div class="panel panel-default panel-plugins">
+					<div class="panel-heading" role="heading">Browser plugins</div>
+					<div class="panel-body">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+				<div class="col-md-6">
+						
+					<div class="panel panel-default panel-network">
+						<div class="panel-heading" role="heading">Network</div>
+						<div class="panel-body">
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+								</div>
+							</div>
+						</div>
+					</div>
+	
+				</div>
+				
+			<div class="col-md-6">
+
+				<div class="panel panel-default panel-sensor">
+					<div class="panel-heading" role="heading">Sensors</div>
+					<div class="panel-body">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="moreinfo-well"></div>
+
+		<canvas id="glcanvas" width="0" height="0"></canvas>
+
+	</div>
+
+	<!-- About modal -->
+	<div class="modal fade" id="whatdevice-about-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel" role="heading">About WhatDevice</h4>
+				</div>
+				<div class="modal-body">
+					<p>WhatDevice is a web app designed to show information about your computer, tablet, phone, or other internet-connected device. It works on most browsers released over the past decade, using JavaScript and OpenGL.</p>
+					<p><span id="whatdevice-credits">Loading WhatDevice supporters...</span> Become a supporter <a href="https://www.patreon.com/corbindavenport" taget="_blank">on Patreon</a>.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Donate modal -->
+	<div class="modal fade" id="whatdevice-donate-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel" role="heading">Support WhatDevice</h4>
+				</div>
+				<div class="modal-body">
+					<p>WhatDevice was developed over the course of many hours in my spare time. If you find WhatDevice useful, please consider donating!</p>
+					<p><button type="button" class="btn btn-success btn-block btn-patreon" data-dismiss="modal">Donate via Patreon</button></p>
+					<p><button type="button" class="btn btn-success btn-block btn-paypal" data-dismiss="modal">Donate via PayPal</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Share results modal (for when Web Share API isn't supported) -->  
+	<div class="modal fade" id="whatdevice-share-modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel" role="heading">Share results</h4>
+				</div>
+				<div class="modal-body">
+						<div class="list-group list-group-flush">
+						<a href="#savefile" class="list-group-item list-group-item-action">Save as text file</a>
+						<a href="#clipboard" class="list-group-item list-group-item-action">Copy to clipboard</a>
+						<a href="#email" class="list-group-item list-group-item-action">Send via email</a>
+						<a href="#sms" class="list-group-item list-group-item-action">Send via SMS</a>
+						<a href="#twitter" target="_blank" class="list-group-item list-group-item-action">Share on Twitter</a>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Device report -->
+	<div class="modal fade" id="reportmodal" tabindex="-1" role="dialog" aria-labelledby="reportModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel" role="heading">Device report</h4>
+				</div>
+				<div class="modal-body">
+					<textarea id="report-text" readonly placeholder="Please wait while the report is generated..." aria-label="Report contents"></textarea>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary clipboard-button" data-clipboard-target="#report-text">Copy to clipboard</button>
+					<button type="button" class="btn btn-success clipboard-success-button" role="alert" aria-live="assertive">Copied!</button>
+					<button type="button" class="btn btn-success clipboard-error-button" role="alert" aria-live="assertive">Error!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="share-button share-button-fab"><span aria-label="Share button" class="material-icons">&#xE80D;</span></div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/platform.js"></script>
+	<script src="js/modernizr-custom.js"></script>
+	<script src="js/includes.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/filesaver.min.js"></script>
+	<script src="js/manup.js"></script>
+	<script src="js/stats.js"></script>
+	<!--[if !IE]><!-->
+	<script src="js/register-sw.js"></script>
+	<!--<![endif]-->
+</body>
+</html>
